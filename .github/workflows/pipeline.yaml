@@ -18,5 +18,5 @@ jobs:
 
       - name: build frontend 
         run: |
-          docker build -t nouran10/angular /angular-app
+          docker build -t nouran10/angular angular-app
           docker push nouran10/angular
