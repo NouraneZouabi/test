@@ -27,7 +27,7 @@ jobs:
           chmod +x mvnw
           ./mvnw clean package 
 
-      - name: build frontend 
+      - name: build backend 
         run: |
           docker build -t nouran10/spring springboot/app
           docker push nouran10/spring
