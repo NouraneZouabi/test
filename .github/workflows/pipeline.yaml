@@ -20,3 +20,15 @@ jobs:
         run: |
           docker build -t nouran10/angular angular-app
           docker push nouran10/angular
+
+      - name: build artifact 
+        run: |
+          cd springboot/app 
+          chmod +x mvnw
+          ./mvnw clean package 
+
+      - name: build frontend 
+        run: |
+          docker build -t nouran10/spring springboot/app
+          docker push nouran10/spring
+
